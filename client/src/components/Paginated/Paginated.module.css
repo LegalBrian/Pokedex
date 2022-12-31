@@ -1,0 +1,40 @@
+.paginated{ 
+    cursor: pointer;
+    font-family: 'PokemonSolid';
+    color: #fc5a4a;
+    width: 45px;
+    height: 45px;
+    line-height: 1;
+    background-image: linear-gradient(45deg, #2D033B 0%, #810CA8 55%, #C147E9 90%);
+    background-position: 90% 0;
+    background-size: 200% 200%;
+    box-shadow: 0 2px 8px -1px #3a003f;
+    transition: all 0.5s ease;
+    margin: 2px
+}
+
+.paginated:hover {
+    box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
+}
+
+.paginated:active{
+    background-image: linear-gradient(45deg, #ec1400 0%, #f83a28 55%, #fc5a4a 90%);
+    color: #2D033B;
+}
+
+.active {
+    cursor: pointer;
+    font-family: 'PokemonSolid';
+    color: #2D033B;
+    width: 45px;
+    height: 45px;
+    line-height: 1;    
+    background-image: linear-gradient(45deg, #ec1400 0%, #f83a28 55%, #fc5a4a 90%);
+    background-position: 90% 0;
+    background-size: 200% 200%;
+    box-shadow: 0 2px 8px -1px #3a003f;
+    transition: all 0.5s ease;
+    margin: 2px
+}
+

@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "PokemonSolid";
+    src: local("PokemonSolid"), url("../../fonts/PokemonSolid.ttf") format("truetype");
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background: url("../../images/Background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    height: 100vh;
+    flex-direction: column;
+  }
+
+.error404{
+    font-family: 'PokemonSolid';
+    font-size: 50px;
+    letter-spacing: 5px;
+    text-align: 4px;
+    color: #fc5a4a;
+    -webkit-text-stroke: 2px black;
+    margin: 0;
+}
+
+.notFound{
+    font-family: 'PokemonSolid';
+    font-size: 30px;
+    letter-spacing: 5px;
+    text-align: 4px;
+    color: #fc5a4a;
+    -webkit-text-stroke: 2px black;
+    margin: 0;
+}
+
+.image{
+    height: 250px;
+    width: 400px;
+    position: absolute;
+    left: 35%;
+    top:50%
+
+}

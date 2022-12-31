@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "PokemonSolid";
+  src: local("PokemonSolid"), url("../../fonts/PokemonSolid.ttf") format("truetype");
+}
+
+
+.container{
+  margin: 10px;
+  background-color: #2D033B;
+  border-radius: 80px;
+  padding: 10px;
+  height: 250px;
+  background-image: url("../../images/SearchBar.png");
+  background-repeat: no-repeat;
+  background-position: 50% -20%;
+  background-size: 760px;
+}
+
+.images{
+  justify-content: space-between;
+}
+
+.bar{
+  position: absolute;
+  top: 40%;
+  left: 18%;
+  display: flex;
+  background:#C147E9;
+  border-radius: 60px;
+  margin-top: -4px;
+  width: 950px;
+}
+
+.image{
+  height: 250px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.searchButton {
+  cursor: pointer;
+  font-size: 20px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #2D033B 0%, #810CA8 55%, #C147E9 90%);
+  background-position: 90% 0;
+  background-size: 200% 200%;
+  box-shadow: 0 2px 8px -1px #3a003f;
+  transition: all 0.5s ease;
+}
+.searchButton:hover {
+  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+} 
+.searchText{
+  font-family: "PokemonSolid";
+  letter-spacing: 4px;
+  border: none;
+  background: none;  
+  outline: none;
+  color: #fc5a4a;
+  -webkit-text-stroke: 2px black;
+  font-size: 16px; 
+  line-height: 40px;
+  display: flex;
+  text-align: center;
+  width: 900px;
+}
+
+input::placeholder{
+  color:rgba(255, 255, 255, 0.829);
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.247);
+}
+ 
+ 
