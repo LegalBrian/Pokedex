@@ -3,6 +3,7 @@ const { Pokemon , Type } = require("../db");
 
 const getPokemonByName = async (name) => {
   try {
+    // aca verifico si se encuentra en db o no, en caso de que no busco en la api.
     const db = await Pokemon.findOne({ where: { name: name }, include: Type });
     if (db) {
       const pokemonDb = [{

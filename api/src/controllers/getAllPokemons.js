@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 const { Pokemon , Type } = require("../db");
 
 const getApiPokemon = async () => {
+  // aca me creo una funcion para hacer la doble llamada a la api para traer los datos de los pokemons.
   const search = async(url) => {
     let aux = {pokemon: null, next: ""};
     await fetch(url)
@@ -32,6 +33,7 @@ const getApiPokemon = async () => {
     });
     return aux
   };
+  // aca tomo la funcion para traer los primeros veinte y los veinte siguientes para concatenarlos.
   const firstTwenty = await search("https://pokeapi.co/api/v2/pokemon");
   const secondTwenty = await search(firstTwenty.next);
   const apiConcat = await firstTwenty.pokemon.concat(secondTwenty.pokemon);
@@ -39,6 +41,7 @@ const getApiPokemon = async () => {
 };
 
 const getDbPokemon = async () => {
+  // aca busco todos los pokemon de la db.
   const pokemonsDb = await Pokemon.findAll({
     include: {
       model: Type,
@@ -55,6 +58,7 @@ const getDbPokemon = async () => {
 };
 
 const getAllPokemon = async () => {
+  // aca tomo las dos funciones de arriba y las concateno.
   const apiPokemon = await getApiPokemon();
   const dbPokemon = await getDbPokemon();
   const pokemon = apiPokemon.concat(dbPokemon);

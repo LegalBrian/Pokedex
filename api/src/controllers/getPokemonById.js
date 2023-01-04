@@ -3,6 +3,7 @@ const { Pokemon , Type } = require("../db");
 
 const getPokemonById = async (id) => {
   try{
+    // aca verifico si es un id de db o de api dependiendo si es NaN o no
     if(!isNaN(id)){
       const api = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
       const data = await api.json();
