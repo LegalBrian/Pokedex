@@ -6,7 +6,7 @@ const postPokemon = async (name, hp, attack, defense, speed, height, weight, typ
     if (exist) throw new Error("Pokemon already exist");
 
     const pokemonCreated = await Pokemon.create({
-        name, 
+        name: name.toLowerCase(), 
         image,
         hp, 
         attack, 
