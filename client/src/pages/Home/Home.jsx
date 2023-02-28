@@ -1,6 +1,5 @@
 import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { getPokemons, getTypes, filterPokemonsByType, filterCreated, orderByName, orderByAttack, orderById } from "../../redux/actions/index";
 import Header from "../../components/Header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
@@ -77,14 +76,10 @@ const Home = () => {
                 <SearchBar paginated={paginated}/>
                 <Sort allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrderedByName={handleOrderedByName} handleOrderedByAttack={handleOrderedByAttack} handleOrderedById={handleOrderedById} />
                 <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
-                <div>
+                <div className={style.homeCardContainer}>
                 {currentPokemons?.map(ele => {
                     return(
-                        <div>
-                            <Link to={`/pokedex/${ele.id}`}>
-                            <Card name={ele.name} image={ele.image} types={ele.types}/>
-                            </Link>
-                        </div>
+                        <Card name={ele.name} image={ele.image} types={ele.types} id={ele.id}/>
                 )})}
                 </div>
                 <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />

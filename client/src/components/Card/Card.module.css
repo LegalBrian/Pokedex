@@ -1,49 +1,57 @@
-.container{
-  float: left;
-}
-
-.card{
-  margin-left: 35px;
-  margin-right: 35px;
-  width: 300px;
-  border-radius: 50px;
-  background-image: linear-gradient(45deg, #2D033B 0%, #810CA8 55%, #C147E9 90%);
-  background-position: 90% 0;
-  background-size: 200% 200%;
-  box-shadow: 0 2px 8px -1px #3a003f;
-  transition: all 0.5s ease;
-}
-
-.card:hover {
-  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
-  background-position: 0 0;
-}
-.cardName{
-  margin: 0;
-  color: #fc5a4a;
-  -webkit-text-stroke: 2px black;
-  font-size: 30px;
-  letter-spacing: 5px;
-}
-
-.pokemonImg {
-  height: 250px;
-}
-
-.types {
+.cardContainer{
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0,0,100,0.7);
+  padding: 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  width: 350px;
 }
 
-.cardType {
-  font-size: 19px;
-  -webkit-text-stroke: 1px black;
-  letter-spacing: 3px;
-  color: white;
-  background: #810CA8;
-  padding: 15px;
-  line-height: 3px;
-  border-radius: 20px;
+.cardContainer:hover{
+  background-color: rgba(75,75,255,0.7);
+  transition-duration: .5s;
+}
+
+.cardDataContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+}
+
+.cardId{
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.cardName{
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.cardImage{
+  width: 200px;
+}
+
+.cardTypesContainer{
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cardType{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  color: #ffffff;
+  width: 50px;
+  text-align: center;
 }
 
 #normal{

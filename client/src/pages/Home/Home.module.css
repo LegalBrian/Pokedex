@@ -6,3 +6,10 @@
   background-attachment: fixed;
   background-size: 100%;
 }
+
+.homeCardContainer{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 20px
+}
