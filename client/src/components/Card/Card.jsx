@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./Card.module.css";
 
-
 const Card = ({name, image, types}) => {
     return(
         <div className={style.container}>

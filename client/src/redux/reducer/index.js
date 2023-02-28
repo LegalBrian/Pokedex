@@ -1,10 +1,9 @@
-
 const inicialState = {
     pokemons : [],
     allPokemons: [],
     types: [],
     detail: []
-}
+};
 
 const rootReducer = (state = inicialState, action) => {
     const allPokemons = state.allPokemons;

@@ -2,7 +2,7 @@ import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getPokemons, getTypes, filterPokemonsByType, filterCreated, orderByName, orderByAttack, orderById } from "../../redux/actions/index";
-import NavBar from "../../components/NavBar/NavBar";
+import Header from "../../components/Header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import Sort from "../../components/Sort/Sort";
 import Paginated from "../../components/Paginated/Paginated";
@@ -72,7 +72,7 @@ const Home = () => {
     
     return(
         <div>
-            <NavBar></NavBar>
+            <Header/>
             <div className={style.container}>
                 <SearchBar paginated={paginated}/>
                 <Sort allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrderedByName={handleOrderedByName} handleOrderedByAttack={handleOrderedByAttack} handleOrderedById={handleOrderedById} />

@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image from "../../images/logo.png"
-import style from './NavBar.module.css';
+import image from "../../images/logo.png";
+import style from './Header.module.css';
 
-
-const NavBar = () => { 
+const Header = () => { 
     return (
         <nav className={style.container}>
             <Link to='/'>
@@ -15,4 +14,4 @@ const NavBar = () => {
         </nav>
     );
 }
-export default NavBar
+export default Header;

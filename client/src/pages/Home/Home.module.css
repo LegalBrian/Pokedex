@@ -1,7 +1,3 @@
-@font-face {
-  font-family: "PokemonSolid";
-  src: local("PokemonSolid"), url("../../fonts/PokemonSolid.ttf") format("truetype");
-}
 
 .container{
   display: flex;
@@ -10,6 +6,16 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100%;
+}
+
+.theme{
+  color:rgba(0,0,0,1.0);
+  color: rgba(0,0,25,1.0);
+  color:rgba(0,0,50,1.0);
+  color:rgba(0,0,75,1.0);
+  color:rgba(0,0,100,1.0);
+  color:rgba(75,75,255,1);
+  color:rgba(255,255,255,1.0);
 }
 
 

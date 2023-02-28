@@ -1,7 +1,4 @@
-@font-face {
-    font-family: "PokemonSolid";
-    src: local("PokemonSolid"), url("../../fonts/PokemonSolid.ttf") format("truetype");
-}
+
 .container{
     display: flex;
     flex-direction: column;
@@ -30,7 +27,6 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
-    font-family: "PokemonSolid";
     color: #fc5a4a;
     -webkit-text-stroke: 1px black;
     font-size: 25px;
@@ -45,7 +41,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-family: "PokemonSolid";
     color: #fc5a4a;
     -webkit-text-stroke: 1px black;
     font-size: 15px;

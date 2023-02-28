@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getNamePokemon } from "../../redux/actions/index";
-import style from "./SearchBar.module.css"
+import style from "./SearchBar.module.css";
 
 const SearchBar = ({paginated}) => {
     const dispatch = useDispatch();

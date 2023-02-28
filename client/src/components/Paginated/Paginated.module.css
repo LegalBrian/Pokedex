@@ -1,6 +1,5 @@
 .paginated{ 
     cursor: pointer;
-    font-family: 'PokemonSolid';
     color: #fc5a4a;
     width: 45px;
     height: 45px;
@@ -25,7 +24,6 @@
 
 .active {
     cursor: pointer;
-    font-family: 'PokemonSolid';
     color: #2D033B;
     width: 45px;
     height: 45px;

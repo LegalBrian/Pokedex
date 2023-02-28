@@ -68,14 +68,14 @@ export const getNamePokemon = (name) => {
             console.log(error);
         }
     }
-}
+};
 
 export const postPokemon = (payload) => {
     return async (dispatch) => {
         const json = await axios.post("http://localhost:3001/pokemons",payload);
         return json;
     }
-}
+};
 
 export const getDetails = (id) => {
     return async (dispatch) => {
@@ -85,4 +85,4 @@ export const getDetails = (id) => {
             payload: json.data
         });
     }
-}
+};

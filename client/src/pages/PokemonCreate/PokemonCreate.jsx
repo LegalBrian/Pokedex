@@ -2,9 +2,9 @@ import React, {useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { postPokemon, getTypes } from "../../redux/actions";
-import NavBar from "../../components/NavBar/NavBar"
+import Header from "../../components/Header/Header";
 import validate from "./validate";
-import image from "../../images/Create.gif"
+import image from "../../images/Create.gif";
 import style from "./PokemonCreate.module.css";
 
 const PokemonCreate = () => {
@@ -73,7 +73,7 @@ const PokemonCreate = () => {
 
     return(
         <div className={style.container}>
-            <NavBar/>
+            <Header/>
             <h1 className={style.title}>Create Pokemon!</h1>
             <form onSubmit={event => handleSubmit(event)}>
                 <div className={style.data}>

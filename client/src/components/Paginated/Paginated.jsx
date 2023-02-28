@@ -1,5 +1,5 @@
 import React from "react";
-import style from "./Paginated.module.css"
+import style from "./Paginated.module.css";
 
 const Paginated = ({currentPage, pokemonsPerPage, allPokemons, paginated}) => {
     const pageNumbers = [];

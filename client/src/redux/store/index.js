@@ -6,5 +6,3 @@ import rootReducer from "../reducer/index";
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 export default store
-
-// thunk es un middleware para permitir acciones asincronas.

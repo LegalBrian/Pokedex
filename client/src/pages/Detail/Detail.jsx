@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetails } from "../../redux/actions";
-import NavBar from "../../components/NavBar/NavBar"
+import Header from "../../components/Header/Header"
 import style from "./Detail.module.css"
 
 const Detail = (props) => {
@@ -17,7 +17,7 @@ const Detail = (props) => {
         <div>
             {myPokemon.length > 0 ? 
             <div className={style.container}>
-                <NavBar/>
+                <Header/>
                 <div className={style.info} >
 
                     <div className={style.data}>

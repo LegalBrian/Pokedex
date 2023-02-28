@@ -1,6 +1,4 @@
-import './App.css';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
-
 import LandingPage from "./pages/LandingPage/LandingPage";
 import Home from "./pages/Home/Home";
 import PokemonCreate from "./pages/PokemonCreate/PokemonCreate"

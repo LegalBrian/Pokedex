@@ -1,4 +1,4 @@
-import style from "./Sort.module.css"
+import style from "./Sort.module.css";
 
 const Sort = ({ allTypes, handlerClick, handleFilterType, handleFilterCreated, handleOrderedByName, handleOrderedByAttack, handleOrderedById }) => {
 
