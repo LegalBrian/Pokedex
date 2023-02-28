@@ -4,7 +4,6 @@ import { useHistory } from "react-router-dom";
 import { postPokemon, getTypes } from "../../redux/actions";
 import Header from "../../components/Header/Header";
 import validate from "./validate";
-import image from "../../images/Create.gif";
 import style from "./PokemonCreate.module.css";
 
 const PokemonCreate = () => {
@@ -155,7 +154,6 @@ const PokemonCreate = () => {
                     {errors.types ? (<div><span className={style.errorType}>{errors.types}</span></div>) :<i></i>}  
                 </div>
                 <div className={style.buttonContainer}>
-                    <img className={style.image} src={image}/>
                     <button className={style.submitButton} type="submit">Create Pokemon</button> 
                 </div>
             </form> 
