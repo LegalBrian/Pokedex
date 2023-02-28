@@ -7,6 +7,7 @@ import Sort from "../../components/Sort/Sort";
 import Paginated from "../../components/Paginated/Paginated";
 import Card from "../../components/Card/Card";
 import style from "./Home.module.css"
+import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
     const dispatch = useDispatch();
@@ -84,6 +85,7 @@ const Home = () => {
                 </div>
                 <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
             </div>
+            <Footer/>
         </div>
     )
 }
