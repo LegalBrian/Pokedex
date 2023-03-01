@@ -31,8 +31,8 @@ const rootReducer = (state = inicialState, action) => {
                 ...state,
                 pokemons: action.payload === "all" ? state.allPokemons : createdFilter,
             }
-        case "ORDER_BY_NAME":
-            const sortedName = action.payload === "ascendant" ? state.pokemons.sort(function(a,b){
+        case "ORDER_BY":
+            const sorted = action.payload === "ascendantName" ? state.pokemons.sort(function(a,b){
                 if (a.name > b.name){
                     return 1
                 }
@@ -40,7 +40,7 @@ const rootReducer = (state = inicialState, action) => {
                     return -1
                 }
                 return 0;
-            }) : state.pokemons.sort(function(a,b){
+            }) : action.payload === "descendantName" ? state.pokemons.sort(function(a,b){
                 if (a.name > b.name){
                     return -1
                 }
@@ -48,13 +48,7 @@ const rootReducer = (state = inicialState, action) => {
                     return 1
                 }
                 return 0
-            })
-            return {
-                ...state,
-                pokemons: sortedName
-            }
-        case "ORDER_BY_ATTACK":
-            const sortedAttack = action.payload === "ascendant" ? state.pokemons.sort(function(a,b){
+            }) :  action.payload === "descendantAttack" ? state.pokemons.sort(function(a,b){
                 if (a.attack > b.attack){
                     return 1
                 }
@@ -62,7 +56,7 @@ const rootReducer = (state = inicialState, action) => {
                     return -1
                 }
                 return 0;
-            }) : state.pokemons.sort(function(a,b){
+            }) :  action.payload === "ascendantAttack" ? state.pokemons.sort(function(a,b){
                 if (a.attack > b.attack){
                     return -1
                 }
@@ -70,13 +64,7 @@ const rootReducer = (state = inicialState, action) => {
                     return 1
                 }
                 return 0
-            })
-            return {
-                ...state,
-                pokemons: sortedAttack
-            }
-        case "ORDER_BY_ID":
-            const sortedId = action.payload === "ascendant" ? state.pokemons.sort(function(a,b){
+            }) : action.payload === "ascendantId" ? state.pokemons.sort(function(a,b){
                 if (a.id > b.id){
                     return 1
                 }
@@ -84,7 +72,7 @@ const rootReducer = (state = inicialState, action) => {
                     return -1
                 }
                 return 0;
-            }) : state.pokemons.sort(function(a,b){
+            }) : action.payload === "descendantId" ? state.pokemons.sort(function(a,b){
                 if (a.id > b.id){
                     return -1
                 }
@@ -92,10 +80,10 @@ const rootReducer = (state = inicialState, action) => {
                     return 1
                 }
                 return 0
-            })
+            }) : 0
             return {
                 ...state,
-                pokemons: sortedId
+                pokemons: sorted
             }
         case "GET_NAME_POKEMON":
             return {

@@ -19,12 +19,12 @@ const Paginated = ({currentPage, pokemonsPerPage, allPokemons, paginated}) => {
         }
     }
     return(
-        <nav>
-            <button className={style.paginated} onClick={prevPage}>Prev</button>
+        <nav className={style.paginatedContainer}>
+            <button className={style.paginatedButton} onClick={prevPage}>Prev</button>
             {pageNumbers?.map(number => (
-                <button className={currentPage === number ? style.active : style.paginated} onClick={()=> paginated(number)}>{number}</button>
+                <button className={currentPage === number ? style.paginatedButtonActive : style.paginatedButton} onClick={()=> paginated(number)}>{number}</button>
             ))}
-            <button className={style.paginated} onClick={nextPage} >Next</button>
+            <button className={style.paginatedButton} onClick={nextPage} >Next</button>
         </nav>
     )
 }

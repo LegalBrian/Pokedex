@@ -5,7 +5,7 @@ import { getNamePokemon } from "../../redux/actions/index";
 import optiondIcon from "../../images/optionsIcon.png"
 import style from "./Options.module.css";
 
-const Options = ({paginated, allTypes, handlerClick, handleFilterType, handleFilterCreated, handleOrderedByName, handleOrderedByAttack, handleOrderedById}) => {
+const Options = ({ paginated, allTypes, handlerClick, handleFilterType, handleFilterCreated, handleOrdered }) => {
     const dispatch = useDispatch();
     const [name, setName] = useState("");
 
@@ -32,20 +32,14 @@ const Options = ({paginated, allTypes, handlerClick, handleFilterType, handleFil
             </div>
             <p  className={style.optionsFiltersSubtitle}>Order by:</p>
             <div className={style.optionsFilters}>
-                <select  className={style.optionsFiltersSelect} onChange={e => handleOrderedById(e)}>
-                    <option disabled selected className={style.optionsFiltersSelectOption}>Id</option>
-                    <option value="ascendant" className={style.optionsFiltersSelectOption}>Ascendant</option>
-                    <option value="descendant" className={style.optionsFiltersSelectOption}>Descendant</option>
-                </select>
-                <select  className={style.optionsFiltersSelect} onChange={e => handleOrderedByName(e)}>
-                    <option disabled selected className={style.optionsFiltersSelectOption}>Name</option>
-                    <option value="ascendant" className={style.optionsFiltersSelectOption}>Ascendant</option>
-                    <option value="descendant" className={style.optionsFiltersSelectOption}>Descendant</option>
-                </select>
-                <select  className={style.optionsFiltersSelect} onChange={e => handleOrderedByAttack(e)}>
-                    <option disabled selected className={style.optionsFiltersSelectOption}>Attack</option>
-                    <option value="ascendant" className={style.optionsFiltersSelectOption}>Ascendant</option>
-                    <option value="descendant" className={style.optionsFiltersSelectOption}>Descendant</option>
+                <select  className={style.optionsFiltersSelect} onChange={e => handleOrdered(e)}>
+                    <option disabled selected className={style.optionsFiltersSelectOption}>Select...</option>
+                    <option value="ascendantId" className={style.optionsFiltersSelectOption}>Id - Ascendant</option>
+                    <option value="descendantId" className={style.optionsFiltersSelectOption}>Id - Descendant</option>
+                    <option value="ascendantName" className={style.optionsFiltersSelectOption}>Name - Ascendant</option>
+                    <option value="descendantName" className={style.optionsFiltersSelectOption}>Name - Descendant</option>
+                    <option value="ascendantAttack" className={style.optionsFiltersSelectOption}>Attack - Ascendant</option>
+                    <option value="descendantAttack" className={style.optionsFiltersSelectOption}>Attack - Descendant</option>
                 </select>
             </div>
             <p className={style.optionsFiltersSubtitle}>Filter by:</p>

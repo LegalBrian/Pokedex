@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getPokemons, getTypes, filterPokemonsByType, filterCreated, orderByName, orderByAttack, orderById } from "../../redux/actions/index";
+import { getPokemons, getTypes, filterPokemonsByType, filterCreated, orderBy } from "../../redux/actions/index";
 import Header from "../../components/Header/Header";
 import Options from "../../components/Options/Options";
 import Paginated from "../../components/Paginated/Paginated";
@@ -45,28 +45,12 @@ const Home = () => {
         dispatch(filterCreated(event.target.value));
     }
 
-    const [ordenByName, setOrdenByName] = useState("");
-    const handleOrderedByName = (event) => {
+    const [order, setOrder] = useState("");
+    const handleOrdered = (event) => {
         event.preventDefault();
         paginated(1)
-        dispatch(orderByName(event.target.value));
-        setOrdenByName(`Ordenado ${event.target.value}`)
-    }
-
-    const [ordenByAttack, setOrdenByAttack] = useState("");
-    const handleOrderedByAttack = (event) => {
-        event.preventDefault();
-        paginated(1)
-        dispatch(orderByAttack(event.target.value));
-        setOrdenByAttack(`Ordenado ${event.target.value}`)
-    }
-
-    const [ordenById, setOrdenById] = useState("");
-    const handleOrderedById = (event) => {
-        event.preventDefault();
-        paginated(1)
-        dispatch(orderById(event.target.value));
-        setOrdenById(`Ordenado ${event.target.value}`)
+        dispatch(orderBy(event.target.value));
+        setOrder(`Ordenado ${event.target.value}`)
     }
     
     return(
@@ -74,7 +58,7 @@ const Home = () => {
             <Header/>
             <div className={style.homeContainer}>
                 <div className={style.homeOptions}>
-                    <Options paginated={paginated} allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrderedByName={handleOrderedByName} handleOrderedByAttack={handleOrderedByAttack} handleOrderedById={handleOrderedById} />
+                    <Options paginated={paginated} allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrdered={handleOrdered}/>
                 </div>
                 <div className={style.homeView}>    
                     <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />

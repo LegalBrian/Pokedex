@@ -25,6 +25,7 @@
   overflow: scroll;
   width: 75vw;
   max-height: 90vh;
+  height: 90vh;
   gap: 10px;
   overflow-x: hidden;
   background: url("../../images/homeBg.png"), linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,50,1) , rgba(0,0,75,1), rgba(0,0,50,1), rgba(0, 0, 0, 1));
@@ -44,8 +45,10 @@
 }
 
 .homeCardContainer{
+  width: 70vw;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 20px;
+  justify-content: center;
   justify-items: center;
-  gap: 20px
 }

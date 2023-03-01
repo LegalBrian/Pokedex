@@ -34,23 +34,9 @@ export const filterCreated = (payload) => {
     }
 };
 
-export const orderByName = (payload) => {
+export const orderBy = (payload) => {
     return {
-        type: "ORDER_BY_NAME",
-        payload,
-    }
-};
-
-export const orderByAttack = (payload) => {
-    return {
-        type: "ORDER_BY_ATTACK",
-        payload,
-    }
-};
-
-export const orderById = (payload) => {
-    return {
-        type: "ORDER_BY_ID",
+        type: "ORDER_BY",
         payload,
     }
 };

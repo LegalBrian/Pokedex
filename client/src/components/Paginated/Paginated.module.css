@@ -1,38 +1,40 @@
-.paginated{ 
+.paginatedButton{ 
     cursor: pointer;
-    color: #fc5a4a;
+    color: #ffffff;
     width: 45px;
     height: 45px;
+    border-radius: 100%;
     line-height: 1;
-    background-image: linear-gradient(45deg, #2D033B 0%, #810CA8 55%, #C147E9 90%);
+    background: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 100, 1), rgba(0,0,200,1), rgba(0, 0, 100, 1), rgba(0, 0, 0, 1));
     background-position: 90% 0;
     background-size: 200% 200%;
     box-shadow: 0 2px 8px -1px #3a003f;
     transition: all 0.5s ease;
-    margin: 2px
+    margin: 5px
 }
 
-.paginated:hover {
+.paginatedButton:hover {
     box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
     background-position: 0 0;
 }
 
-.paginated:active{
-    background-image: linear-gradient(45deg, #ec1400 0%, #f83a28 55%, #fc5a4a 90%);
-    color: #2D033B;
+.paginatedButton:active{
+    background: linear-gradient(to bottom left, rgba(75,75,200,1), rgba(50, 50, 200, 1), rgba(25,25,250,1), rgba(50, 50, 200, 1), rgba(75, 75, 200, 1));
+    box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+    background-position: 0 0;
 }
 
-.active {
+.paginatedButtonActive {
     cursor: pointer;
-    color: #2D033B;
+    color: #ffffff;
     width: 45px;
     height: 45px;
+    border-radius: 10px;
     line-height: 1;    
-    background-image: linear-gradient(45deg, #ec1400 0%, #f83a28 55%, #fc5a4a 90%);
+    background: linear-gradient(to bottom left, rgba(75,75,200,1), rgba(50, 50, 200, 1), rgba(25,25,250,1), rgba(50, 50, 200, 1), rgba(75, 75, 200, 1));
     background-position: 90% 0;
     background-size: 200% 200%;
     box-shadow: 0 2px 8px -1px #3a003f;
     transition: all 0.5s ease;
     margin: 2px
 }
-
