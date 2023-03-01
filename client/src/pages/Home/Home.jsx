@@ -2,8 +2,7 @@ import React, { useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPokemons, getTypes, filterPokemonsByType, filterCreated, orderByName, orderByAttack, orderById } from "../../redux/actions/index";
 import Header from "../../components/Header/Header";
-import SearchBar from "../../components/SearchBar/SearchBar";
-import Sort from "../../components/Sort/Sort";
+import Options from "../../components/Options/Options";
 import Paginated from "../../components/Paginated/Paginated";
 import Card from "../../components/Card/Card";
 import style from "./Home.module.css"
@@ -73,17 +72,20 @@ const Home = () => {
     return(
         <div>
             <Header/>
-            <div className={style.container}>
-                <SearchBar paginated={paginated}/>
-                <Sort allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrderedByName={handleOrderedByName} handleOrderedByAttack={handleOrderedByAttack} handleOrderedById={handleOrderedById} />
-                <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
-                <div className={style.homeCardContainer}>
-                {currentPokemons?.map(ele => {
-                    return(
-                        <Card name={ele.name} image={ele.image} types={ele.types} id={ele.id}/>
-                )})}
+            <div className={style.homeContainer}>
+                <div className={style.homeOptions}>
+                    <Options paginated={paginated} allTypes={allTypes} handlerClick={handlerClick} handleFilterType={handleFilterType} handleFilterCreated={handleFilterCreated} handleOrderedByName={handleOrderedByName} handleOrderedByAttack={handleOrderedByAttack} handleOrderedById={handleOrderedById} />
                 </div>
-                <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
+                <div className={style.homeView}>    
+                    <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
+                    <div className={style.homeCardContainer}>
+                    {currentPokemons?.map(ele => {
+                        return(
+                            <Card name={ele.name} image={ele.image} types={ele.types} id={ele.id}/>
+                    )})}
+                    </div>
+                    <Paginated currentPage={currentPage} pokemonsPerPage={pokemonsPerPage} allPokemons={allPokemons.length} paginated={paginated} />
+                </div>
             </div>
             <Footer/>
         </div>

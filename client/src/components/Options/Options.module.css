@@ -1,0 +1,78 @@
+.optionsContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.optionsIcon{
+  width: 150px;
+  height: 150px;
+}
+
+.optionsSearchBar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.optionsSearchBarInput{
+  width: 230px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  background-color: rgba(0,0,100,1.0);
+  color: #ffffff;
+  border: none;
+}
+
+.optionsSearchBarInput::placeholder{
+  color:rgba(255, 255, 255, 0.829);
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.247);
+}
+
+.optionsButton{
+  width: 250px;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(120, 120, 120, 0.5)) ;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.optionsButton:hover{
+  background: rgb(100, 100, 255);
+  transition-duration: .5s;
+}
+
+.optionsFilters{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.optionsFiltersSubtitle{
+  color: #ffffff;
+}
+
+.optionsFiltersSelect{
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  background-color: rgba(0,0,100,1.0);
+  color: #ffffff;
+  border: none;
+}
+
+.optionsFiltersSelectOption{
+  background-color: rgba(0,0,50,1.0);
+
+}
