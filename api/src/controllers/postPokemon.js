@@ -6,6 +6,8 @@ const postPokemon = async (name, hp, attack, defense, speed, height, weight, typ
     const exist = await Pokemon.findOne({where: {name: name}});
     if (exist) throw new Error("Pokemon already exist");
 
+    if(!image) image = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png";
+
     const pokemonCreated = await Pokemon.create({
         name: name.toLowerCase(), 
         image,

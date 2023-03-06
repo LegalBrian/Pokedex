@@ -1,11 +1,18 @@
 .footerContainer{
     background-color: #400255;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1.5rem;
     background-color: rgba(0,0,0,1);
+}
+
+.footerButton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     text-decoration: none;
 }
 
@@ -16,5 +23,5 @@
 
 .footerText{
     font-size: 17px;
-    color: #ffffff
+    color: #ffffff;
 }

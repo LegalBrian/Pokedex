@@ -1,3 +1,7 @@
+.createForm{
+  height: 100vh;
+}
+
 .homeContainer{
   display: flex;
   flex-direction: row;

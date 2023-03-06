@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getDetails } from "../../redux/actions";
-import Header from "../../components/Header/Header"
+import Header from "../../components/Header/Header";
+import Footer from "../../components/Footer/Footer";
 import style from "./Detail.module.css"
 
 const Detail = (props) => {
@@ -20,24 +21,28 @@ const Detail = (props) => {
                 <Header/>
                 <div className={style.info} >
 
-                    <div className={style.data}>
-                        <h1 className={style.name}>Name: {myPokemon[0].name[0].toUpperCase().concat(myPokemon[0].name.slice(1))}</h1>
-                        <h3 className={style.id}>Id: {myPokemon[0].id}</h3>
-                        <img className={style.img} src={myPokemon[0].image}/>
+                    <div className={style.detailDataContainer}>
+                        <p className={style.detailData}>Name: {myPokemon[0].name[0].toUpperCase().concat(myPokemon[0].name.slice(1))}</p>
+                        <p className={style.detailData}>Id: {myPokemon[0].id}</p>
+                        <img className={style.detailImage} src={myPokemon[0].image}/>
                     </div>
                 
                 
-                    <div className={style.data}>
-                        <h3 className={style.typesContainer}>Types: {myPokemon[0].types.map(ele => <h3 className={style.types} id={style[ele]}>{ele[0].toUpperCase().concat(ele.slice(1))}</h3>)}</h3>
-                        <h3 className={style.hp}>HP: {myPokemon[0].hp}</h3>
-                        <h3 className={style.attack}>Attack: {myPokemon[0].attack}</h3>
-                        <h3 className={style.defense}>Defense: {myPokemon[0].defense}</h3>
-                        <h3 className={style.speed}>Speed: {myPokemon[0].speed}</h3>
-                        <h3 className={style.height}>Height: {(myPokemon[0].height / 10).toFixed(1) + "m"}</h3>
-                        <h3 className={style.weight}>Weight: {(myPokemon[0].weight / 10).toFixed(1) + "kg"}</h3>
+                    <div className={style.detailDataContainer}>
+                        <p className={style.detailDataTypes}>Type(s): {myPokemon[0].types.map(ele => <p className={style.types} id={style[ele]}>{ele[0].toUpperCase().concat(ele.slice(1))}</p>)}</p>
+                        <p className={style.detailData}>HP: {myPokemon[0].hp}</p>
+                        <p className={style.detailData}>Attack: {myPokemon[0].attack}</p>
+                        <p className={style.detailData}>Defense: {myPokemon[0].defense}</p>
+                        <p className={style.detailData}>Speed: {myPokemon[0].speed}</p>
+                        <p className={style.detailData}>Height: {(myPokemon[0].height / 10).toFixed(1) + "m"}</p>
+                        <p className={style.detailData}>Weight: {(myPokemon[0].weight / 10).toFixed(1) + "kg"}</p>
                     </div>
                 </div>
-            </div> : <p>Loading...</p>
+                <Footer/>
+            </div> : 
+            <div>
+                <p>Loading...</p>
+            </div>
             }
         </div>
     )

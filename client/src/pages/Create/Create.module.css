@@ -1,0 +1,225 @@
+.createContainer{
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh;
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0,0,100,1) , rgba(0,0,150,1), rgba(0,0,100,1), rgba(0, 0, 0, 1));
+  color: white;
+}
+
+.createForm{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5vw;
+  align-items: center;
+}
+
+.createData{
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.createField{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 45vw;
+  align-items: center;
+}
+
+.createFieldInputAndError{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.createValorInput{
+  width: 60px;
+  text-align: center;
+}
+
+.createImage{
+  width: 150px;
+  height: 150px;
+}
+
+.createLabel{
+  width: 80px;
+  text-align: start;
+}
+
+.createInput{
+  width: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  text-align: center;
+  background-color: rgba(50, 50, 255, 0.8);
+  color: #ffffff;
+  border: none;
+}
+
+.createInputRange{
+  margin: 5px;
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100px;
+  height: 7px;
+  background: rgb(100, 100, 255);
+  border-radius: 5px;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: rgb(0,0,255);
+  cursor: ew-resize;
+}
+
+.createButton{
+  width: 250px;
+  background: linear-gradient(to bottom left, rgba(0, 0, 0, 1), rgba(0, 0, 100, 1), rgba(0,0,200,1), rgba(0, 0, 100, 1), rgba(0, 0, 0, 1));
+  background-position: 90% 0;
+  background-size: 200% 200%;
+  box-shadow: 0 2px 8px -1px #3a003f;
+  transition: all 0.5s ease;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.createButton:hover{
+  box-shadow: 0 0px 0px 0 rgba(0, 40, 120, 0);
+  background-position: 0 0;
+}
+
+.errorContainer{
+  font-size: 10px;
+  color: red;
+  height: 20px;
+  text-align: center;
+}
+
+.createTypesContainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 10px;
+}
+
+.createTypes{
+  width: 100px;
+}
+
+.createLabel{
+  cursor: pointer;
+}
+.createCheckbox{
+  display: none;
+}
+
+.createSpan:before{
+  content: "";
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  border: solid 3px red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createCheckbox:checked + .createSpan:before{
+  border: solid 3px green;
+}
+
+#normal:before{
+  content: "Normal";
+  background: #828282;
+}
+#grass:before{
+  content: "Grass";
+  background: #439937;
+}
+#fire:before{
+  content: "Fire";
+  background: #e5613e;
+}
+#water:before{
+  content: "Water";
+  background: #309ae2;
+}
+#electric:before{
+  content: "Electric";
+  background: #e0bd28;
+}
+#rock:before{
+  content: "Rock";
+  background: #aaa581;
+}
+#fighting:before{
+  content: "Fighting";
+  background: #e5613e;
+}
+#psychic:before{
+  content: "Psychic";
+  background: #ea6c8d;
+}
+#ghost:before{
+  content: "Ghost";
+  background: #6f4570;
+}
+#poison:before{
+  content: "Poison";
+  background: #9454cc;
+}
+#flying:before{
+  content: "Flying";
+  background: #74abd1;
+}
+#ground:before{
+  content: "Ground";
+  background: #a5733c;
+}
+#dragon:before{
+  content: "Dragon";
+  background: #576fbd;
+}
+#ice:before{
+  content: "Ice";
+  background: #47c9c9;
+}
+#bug:before{
+  content: "Bug";
+  background: #a0a028;
+}
+#steel:before{
+  content: "Steel";
+  background: #6badc9;
+}
+#dark:before{
+  content: "Dark";
+  background: #4f4747;
+}
+#fairy:before{
+  content: "Fairy";
+  background: #e28de2;
+}
+#shadow:before{
+  content: "Shadow";
+  background: #000000;
+}
+#unknown:before{
+  content: "Unknown";
+  background: #68a090;
+}
