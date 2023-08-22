@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
-import { postPokemon, getTypes } from "../../redux/actions";
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer"
+import { postPokemon, getTypes } from "../redux/actions";
+import Header from "../components/Header";
+import Footer from "../components/Footer"
 import validate from "./validate";
 import style from "./Create.module.css";
 
@@ -69,21 +69,21 @@ const PokemonCreate = () => {
     return(
         <div>
             <Header/>
-            <form onSubmit={event => handleSubmit(event)} className={style.createContainer}>
-                <h1 className={style.createTitle}>Create Pokemon!</h1>
+            <form onSubmit={event => handleSubmit(event)} className="flex flex-col justify-center items-center p-10 gap-5">
+                <h1 className="">Create Pokemon!</h1>
                 <div className={style.createForm}>
                     <div className={style.createData}>
 
                         <div className={style.createField}>
-                            <label className={style.createLabel}>Name: </label>
+                            <label className="pr-5">Name:</label>
                             <div className={style.createFieldInputAndError}>
-                                <input className={style.createInput} type="text" name="name" value={input.name} onChange={handleChange} placeholder="Add Name"/>
+                                <input className="w-[200px] h-[40px] border-[#278fff] rounded-md border-2 bg-normal placeholder:text-main-dark text-main-dark text-center" type="text" name="name" value={input.name} onChange={handleChange} placeholder="Add Name..."/>
                                 {errors.name ? (<div className={style.errorContainer}><span className={style.errors}>{errors.name}</span></div>) : <div className={style.errorContainer}></div>}
                             </div>
                         </div>
 
                         <div className={style.createTypeField}>
-                            <label className={style.createLabel}>Type(s): </label>
+                            <label className="">Type(s):</label>
                             {errors.types ? (<div className={style.errorContainer}><span className={style.errors}>{errors.types}</span></div>) : <div className={style.errorContainer}></div>}
                             <div className={style.createTypesContainer}>
                                 {types.map( type => (
@@ -99,14 +99,6 @@ const PokemonCreate = () => {
 
                     </div>
                     <div className={style.createData}>
-                        
-                        <div className={style.createField}>
-                            <label className={style.createLabel}>Image: </label>
-                            <div className={style.createFieldInputAndError}>
-                                <input className={style.createInput} type="text" name="image" value={input.image}  onChange={handleChange} placeholder="Add Image URL"/>
-                                <img src={input.image? input.image : "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png"} className={style.createImage} />
-                            </div>
-                        </div>
 
                         <div className={style.createField}>
                             <label className={style.createLabel}>HP: </label>
@@ -164,7 +156,7 @@ const PokemonCreate = () => {
 
                     </div>
                 </div>    
-                <button className={style.createButton} type="submit">Create Pokemon</button>
+                <button className="h-[40px] w-[150px] rounded-xl cursor-pointer flex items-center justify-center text-base text-[#007aff] font-code font-medium border-2 border-solid border-[#007aff] outline-none px-2 py-0 hover:text-main-light hover:bg-[#007aff] transition duration-500" type="submit">Create Pokemon</button>
             </form>
             <Footer/>
         </div>

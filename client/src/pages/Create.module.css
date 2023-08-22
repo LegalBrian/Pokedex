@@ -130,6 +130,7 @@ input::-webkit-slider-thumb {
 
 .createSpan:before{
   content: "";
+  color: #ffffff;
   height: 40px;
   width: 100px;
   border-radius: 10px;

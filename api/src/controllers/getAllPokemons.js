@@ -34,10 +34,9 @@ const getApiPokemon = async () => {
     return aux
   };
   // aca tomo la funcion para traer los primeros veinte y los veinte siguientes para concatenarlos.
-  const firstTwenty = await search("https://pokeapi.co/api/v2/pokemon");
-  const secondTwenty = await search(firstTwenty.next);
-  const apiConcat = await firstTwenty.pokemon.concat(secondTwenty.pokemon);
-  return apiConcat;
+  const apiSearch = await search("https://pokeapi.co/api/v2/pokemon?limit=48");
+  const apiResult = await apiSearch.pokemon;
+  return apiResult;
 };
 
 const getDbPokemon = async () => {
